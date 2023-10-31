@@ -1,11 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <h1> send me</h1>
-</body>
+  </head>
+  <body>
+    <h1>send me</h1>
+    <ul>
+      <% data.forEach(function(post) { %>
+      <li>
+        <h2><%= post.title %></h2>
+        <p><%= post.body %></p>
+        <a href="blog/<%=post.id%>"><%=post.id%> read this one</a>
+      </li>
+      <% }); %>
+    </ul>
+  </body>
 </html>
